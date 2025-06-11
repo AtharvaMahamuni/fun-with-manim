@@ -8,6 +8,13 @@ config.frame_width = 12.0
 
 class DefaultTemplate(Scene):
     def construct(self):
+        axes = Axes(
+            x_range=[-15, 15, 1],  # min, max, step
+            y_range=[-8, 8, 1],
+            axis_config={"color": BLUE}
+        )
+        self.add(axes)
+        
         box = Rectangle(stroke_color=GREEN_C, stroke_opacity=0.7, fill_color=RED_B, fill_opacity=0.5, height=1, width=1)
         
         self.add(box)
