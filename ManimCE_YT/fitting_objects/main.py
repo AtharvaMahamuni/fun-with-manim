@@ -18,6 +18,9 @@ class DefaultTemplate(Scene):
         
         circle = Circle(stroke_width=6, stroke_color=YELLOW, fill_color=RED_C, fill_opacity=0.8)
         circle.set_width(2).to_edge(DR, buff=0)
+        
+        circle2 = Circle(1)
+        self.play(Write(circle2))
 
         triangle = Triangle(stroke_color = ORANGE, stroke_width = 10, fill_color = GREY).set_height(2).shift(DOWN*3+RIGHT*3)
 
@@ -28,3 +31,6 @@ class DefaultTemplate(Scene):
         self.play(DrawBorderThenFill(circle))
         self.play(circle.animate.set_width(0))
         self.play(Transform(circle, triangle), run_time=3)
+
+        square = Square(2)
+        self.play(Write(square))
