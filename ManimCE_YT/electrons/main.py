@@ -1,6 +1,9 @@
 from manim import *
 import numpy as np
 
+config.background_color = WHITE
+config.background_opacity = 0.5
+
 class SubtleElectronBackground(Scene):
     def construct(self):
         num_electrons = 1000
